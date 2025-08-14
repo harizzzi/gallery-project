@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #000000;
+}
+
+nav{
+    height: 15vh;
+    width: 70vw;
+    min-width: 600px;
+    display: block;
+    align-items: left;
+    justify-content: right;
+    margin: right;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    float: right;
+    list-style-type: none;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover{
+    color: #ffffff;
+}
+a:hover:after{
+    width: 100%;
+}
+
+header {
+  display: none;
+}
+
+#lock-screen {
+    text-align: center;
+    padding: 50px;
+    background: rgb(0, 0, 0);
+    max-width: 400px;
+    margin: 80px auto;
+    border-radius: 10px;
+    height: 500px;
+    box-shadow: 0px 4px 15px rgba(49, 194, 20, 0.1);
+}
+
+#password-input {
+    padding: 10px;
+    width: 80%;
+    border-radius: 30px;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #fff;
+}
+
+p {
+  color: #fff;
+}
+
+#unlock-btn {
+    padding: 10px 20px;
+    background: #33fd55;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    border-radius: 20px
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  border-bottom: 2px solid #21f32c;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #21f356;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+nav .btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #28f321;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav .btn:hover {
+  background-color: #1976d2;
+}
+
+#gallery-container {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+  box-shadow: 0 4px 15px rgba(28, 255, 8, 0.932);
+}
+
+#gallery-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(9, 255, 71, 0.966);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#lightbox img {
+    max-width: 70%;      /* Lebarkan max ikut kesesuaian */
+    max-height: 70vh;    /* Hadkan tinggi gambar ikut viewport height */
+    border-radius: 10px;
+    object-fit: contain; /* Pastikan gambar tak jadi pelik bila resize */
+}
+
+
+#close-lightbox {
+    position: absolute;
+    top: 20px; right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+#download-btn {
+    margin-top: 15px;
+    background: #4cafef;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#download-btn:hover {
+    background: #2196f3;
+}
